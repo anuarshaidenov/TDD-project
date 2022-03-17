@@ -1,9 +1,17 @@
 class Solver
-  def factorial(n)
-    n == 1 || n == 0 ? 1 : factorial(n - 1) * n
+  def factorial(number)
+    [1, 0].include?(number) ? 1 : factorial(number - 1) * number
   end
 
   def reverse(word)
-    word = word.reverse
+    word.reverse
+  end
+
+  def fizzbuzz(number)
+    return 'fizzbuzz' if (number % 15).zero?
+    return 'fizz' if (number % 3).zero?
+    return 'buzz' if (number % 5).zero?
+
+    number.to_s
   end
 end
