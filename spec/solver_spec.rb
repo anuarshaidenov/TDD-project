@@ -47,6 +47,9 @@ describe Solver do
       expect(solver.fizzbuzz(15)).to eq 'fizzbuzz'
     end
     
+    it "any other case shold return n as a string" do
+      expect(solver.fizzbuzz(7)).to eq '7'
+    end
     
   end
 end
