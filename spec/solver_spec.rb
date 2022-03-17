@@ -12,6 +12,10 @@ describe Solver do
     it 'returns n factorial for given n' do
       expect(solver.factorial(5)).to eq 120
     end
+
+    it 'should raise an exeption on negative number' do
+      expect { solver.factorial(-5) }.to raise_exception(TypeError)
+    end
   end
 
   context 'Testing reverse method' do
