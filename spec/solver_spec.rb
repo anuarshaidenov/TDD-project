@@ -24,5 +24,13 @@ describe Solver do
     it "revers the input string, where sting is multiple characters" do
       expect(solver.reverse('Hello')).to eq 'olleH'
     end
+
+    it "revers the input string, where sting is multiple words" do
+      expect(solver.reverse('Hello world')).to eq 'dlrow olleH'
+    end
+
+    it "revers the input string, where characters are digits" do
+      expect(solver.reverse('123456')).to eq '654321'
+    end
   end
 end
